@@ -1,0 +1,327 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:hbridge-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Q_NPN_Darlington_BCE Q1
+U 1 1 597E34C5
+P 2950 1800
+F 0 "Q1" H 3130 1850 50  0000 L CNN
+F 1 "Q_NPN_Darlington_BCE" H 3130 1750 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Horizontal_Reversed" H 3150 1900 50  0001 C CNN
+F 3 "" H 2950 1800 50  0001 C CNN
+	1    2950 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NPN_Darlington_BCE Q2
+U 1 1 597E34CC
+P 2950 2900
+F 0 "Q2" H 3130 2950 50  0000 L CNN
+F 1 "Q_NPN_Darlington_BCE" H 3130 2850 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Horizontal_Reversed" H 3150 3000 50  0001 C CNN
+F 3 "" H 2950 2900 50  0001 C CNN
+	1    2950 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R5
+U 1 1 597E34D3
+P 2400 2900
+F 0 "R5" V 2480 2900 50  0000 C CNN
+F 1 "R" V 2400 2900 50  0000 C CNN
+F 2 "Resistors_SMD:R_1210" V 2330 2900 50  0001 C CNN
+F 3 "" H 2400 2900 50  0001 C CNN
+	1    2400 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 597E34DA
+P 2350 1800
+F 0 "R3" V 2430 1800 50  0000 C CNN
+F 1 "R" V 2350 1800 50  0000 C CNN
+F 2 "Resistors_SMD:R_1210" V 2280 1800 50  0001 C CNN
+F 3 "" H 2350 1800 50  0001 C CNN
+	1    2350 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 2000 3050 2700
+Wire Wire Line
+	2750 2900 2550 2900
+Wire Wire Line
+	2750 1800 2500 1800
+$Comp
+L OPTO-TRANSISTOR U1
+U 1 1 597E34E4
+P 1650 1700
+F 0 "U1" H 1450 1900 50  0000 L CNN
+F 1 "OPTO-TRANSISTOR" H 1450 1500 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_SMD" H 1450 1500 50  0001 L CIN
+F 3 "" H 1650 1700 50  0001 L CNN
+	1    1650 1700
+	1    0    0    -1  
+$EndComp
+Text HLabel 1950 2900 0    60   Input ~ 0
+AL
+Text HLabel 1150 1600 0    60   Input ~ 0
+AH
+Wire Wire Line
+	1150 1600 1350 1600
+Wire Wire Line
+	1950 2900 2250 2900
+Wire Wire Line
+	1950 1800 2200 1800
+Text HLabel 3250 2350 2    60   Output ~ 0
+OUTA
+Wire Wire Line
+	3250 2350 3050 2350
+Connection ~ 3050 2350
+$Comp
+L Earth #PWR01
+U 1 1 597E34F3
+P 3050 3500
+F 0 "#PWR01" H 3050 3250 50  0001 C CNN
+F 1 "Earth" H 3050 3350 50  0001 C CNN
+F 2 "" H 3050 3500 50  0001 C CNN
+F 3 "" H 3050 3500 50  0001 C CNN
+	1    3050 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 3500 3050 3100
+$Comp
+L R R1
+U 1 1 597E34FA
+P 1150 2100
+F 0 "R1" V 1230 2100 50  0000 C CNN
+F 1 "R" V 1150 2100 50  0000 C CNN
+F 2 "Resistors_SMD:R_1210" V 1080 2100 50  0001 C CNN
+F 3 "" H 1150 2100 50  0001 C CNN
+	1    1150 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 1800 1150 1950
+Wire Wire Line
+	1150 1800 1350 1800
+$Comp
+L Earth #PWR02
+U 1 1 597E3503
+P 1150 2400
+F 0 "#PWR02" H 1150 2150 50  0001 C CNN
+F 1 "Earth" H 1150 2250 50  0001 C CNN
+F 2 "" H 1150 2400 50  0001 C CNN
+F 3 "" H 1150 2400 50  0001 C CNN
+	1    1150 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 2400 1150 2250
+$Comp
+L VPP #PWR03
+U 1 1 597E350A
+P 3050 1100
+F 0 "#PWR03" H 3050 950 50  0001 C CNN
+F 1 "VPP" H 3050 1250 50  0000 C CNN
+F 2 "" H 3050 1100 50  0001 C CNN
+F 3 "" H 3050 1100 50  0001 C CNN
+	1    3050 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1700 2650 1700
+Wire Wire Line
+	2650 1700 2650 1350
+Wire Wire Line
+	2650 1350 3050 1350
+Wire Wire Line
+	3050 1100 3050 1600
+Connection ~ 3050 1350
+$Comp
+L Q_NPN_Darlington_BCE Q3
+U 1 1 597E3DC8
+P 2950 4650
+F 0 "Q3" H 3130 4700 50  0000 L CNN
+F 1 "Q_NPN_Darlington_BCE" H 3130 4600 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Horizontal_Reversed" H 3150 4750 50  0001 C CNN
+F 3 "" H 2950 4650 50  0001 C CNN
+	1    2950 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NPN_Darlington_BCE Q4
+U 1 1 597E3DCE
+P 2950 5750
+F 0 "Q4" H 3130 5800 50  0000 L CNN
+F 1 "Q_NPN_Darlington_BCE" H 3130 5700 50  0000 L CNN
+F 2 "TO_SOT_Packages_THT:TO-220_Horizontal_Reversed" H 3150 5850 50  0001 C CNN
+F 3 "" H 2950 5750 50  0001 C CNN
+	1    2950 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R6
+U 1 1 597E3DD4
+P 2400 5750
+F 0 "R6" V 2480 5750 50  0000 C CNN
+F 1 "R" V 2400 5750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1210" V 2330 5750 50  0001 C CNN
+F 3 "" H 2400 5750 50  0001 C CNN
+	1    2400 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 597E3DDA
+P 2350 4650
+F 0 "R4" V 2430 4650 50  0000 C CNN
+F 1 "R" V 2350 4650 50  0000 C CNN
+F 2 "Resistors_SMD:R_1210" V 2280 4650 50  0001 C CNN
+F 3 "" H 2350 4650 50  0001 C CNN
+	1    2350 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 4850 3050 5550
+Wire Wire Line
+	2750 5750 2550 5750
+Wire Wire Line
+	2750 4650 2500 4650
+$Comp
+L OPTO-TRANSISTOR U2
+U 1 1 597E3DE3
+P 1650 4550
+F 0 "U2" H 1450 4750 50  0000 L CNN
+F 1 "OPTO-TRANSISTOR" H 1450 4350 50  0000 L CNN
+F 2 "Housings_DIP:DIP-6_W7.62mm_SMD" H 1450 4350 50  0001 L CIN
+F 3 "" H 1650 4550 50  0001 L CNN
+	1    1650 4550
+	1    0    0    -1  
+$EndComp
+Text HLabel 1950 5750 0    60   Input ~ 0
+BL
+Text HLabel 1150 4450 0    60   Input ~ 0
+BH
+Wire Wire Line
+	1150 4450 1350 4450
+Wire Wire Line
+	1950 5750 2250 5750
+Wire Wire Line
+	1950 4650 2200 4650
+Text HLabel 3250 5200 2    60   Output ~ 0
+OUTB
+Wire Wire Line
+	3250 5200 3050 5200
+Connection ~ 3050 5200
+$Comp
+L Earth #PWR04
+U 1 1 597E3DF1
+P 3050 6350
+F 0 "#PWR04" H 3050 6100 50  0001 C CNN
+F 1 "Earth" H 3050 6200 50  0001 C CNN
+F 2 "" H 3050 6350 50  0001 C CNN
+F 3 "" H 3050 6350 50  0001 C CNN
+	1    3050 6350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 5950 3050 6350
+$Comp
+L R R2
+U 1 1 597E3DF8
+P 1150 4950
+F 0 "R2" V 1230 4950 50  0000 C CNN
+F 1 "R" V 1150 4950 50  0000 C CNN
+F 2 "Resistors_SMD:R_1210" V 1080 4950 50  0001 C CNN
+F 3 "" H 1150 4950 50  0001 C CNN
+	1    1150 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 4650 1150 4800
+Wire Wire Line
+	1150 4650 1350 4650
+$Comp
+L Earth #PWR05
+U 1 1 597E3E00
+P 1150 5250
+F 0 "#PWR05" H 1150 5000 50  0001 C CNN
+F 1 "Earth" H 1150 5100 50  0001 C CNN
+F 2 "" H 1150 5250 50  0001 C CNN
+F 3 "" H 1150 5250 50  0001 C CNN
+	1    1150 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 5250 1150 5100
+$Comp
+L VPP #PWR06
+U 1 1 597E3E07
+P 3050 3950
+F 0 "#PWR06" H 3050 3800 50  0001 C CNN
+F 1 "VPP" H 3050 4100 50  0000 C CNN
+F 2 "" H 3050 3950 50  0001 C CNN
+F 3 "" H 3050 3950 50  0001 C CNN
+	1    3050 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4550 2650 4550
+Wire Wire Line
+	2650 4550 2650 4200
+Wire Wire Line
+	2650 4200 3300 4200
+Wire Wire Line
+	3050 3950 3050 4450
+Connection ~ 3050 4200
+Text HLabel 3300 4200 2    60   Input ~ 0
+POWER
+Text HLabel 3250 6150 2    60   BiDi ~ 0
+GND
+Wire Wire Line
+	3250 6150 3050 6150
+Connection ~ 3050 6150
+$EndSCHEMATC

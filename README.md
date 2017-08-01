@@ -10,3 +10,4 @@ Latskap
 - 6 mm aluminium arms for strength
 - "Nordic triangles" on M6 hex bolts. 
 
+Liquor cabinet, maker-style.
